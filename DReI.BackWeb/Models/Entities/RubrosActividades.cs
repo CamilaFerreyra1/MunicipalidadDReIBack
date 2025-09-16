@@ -1,0 +1,66 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DReI.BackWeb.Models.Entities
+{
+    [Table("DRI_RubrosActividades")] 
+    public class RubroActividad
+    {
+        public RubroActividad()
+        {
+        }
+
+        public void ValoresPorDefecto()
+        {
+            FAlta = DateTime.Now;
+            UsrAlta = 0;
+            FModi = new DateTime(1900, 1, 1);
+            UsrModi = 0;
+            FBaja = new DateTime(1900, 1, 1);
+            UsrBaja = 0;
+        }
+
+        [Key]
+        public int IdRubroActividad { get; set; }
+
+        [Required]
+        public int IdRubro { get; set; }
+
+        [Required]
+        public int COMUNA { get; set; }
+
+        [Required]
+        public int CodActividad { get; set; } 
+
+        [Required]
+        public int NroNomenclador { get; set; }
+
+        [Required]
+        public DateTime FAlta { get; set; }
+
+        [Required]
+        public int UsrAlta { get; set; }
+
+        [Required]
+        public DateTime FModi { get; set; }
+
+        [Required]
+        public int UsrModi { get; set; }
+
+        [Required]
+        public DateTime FBaja { get; set; }
+
+        [Required]
+        public int UsrBaja { get; set; }
+
+        // 🔗 Propiedades de navegación (opcional, descomenta si las necesitas)
+
+        // [ForeignKey("IdRubro")]
+        // public virtual Rubro Rubro { get; set; }
+
+        // Si tienes entidad "Actividad", puedes agregar:
+        // [ForeignKey("CodActividad")]
+        // public virtual Actividad Actividad { get; set; }
+    }
+}

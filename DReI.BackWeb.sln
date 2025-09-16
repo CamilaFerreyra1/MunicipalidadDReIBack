@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36107.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DReI.BackWeb", "DReI.BackWeb\DReI.BackWeb.csproj", "{555A246A-13A1-42D3-9BE1-6623514F7274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{555A246A-13A1-42D3-9BE1-6623514F7274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555A246A-13A1-42D3-9BE1-6623514F7274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555A246A-13A1-42D3-9BE1-6623514F7274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555A246A-13A1-42D3-9BE1-6623514F7274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6925C8E3-BECB-4A88-87B1-2DAD85C39290}
+	EndGlobalSection
+EndGlobal
