@@ -33,7 +33,7 @@ namespace DReI.BackWeb.Services
         // Obtiene carátulas entre dos fechas
         public List<CaratulaMagic> ObtenerCaratulas(DateTime fDesde, DateTime fHasta)
         {
-            using (var context = new DbContext())
+            using (var context = new ApplicationDbContext())
             {
                 return context.MAGIC_C03CARAA
                     .Where(c => c.F_BAJA_CAR.Year == 1900 && c.PERIODO_CAR >= fDesde && c.PERIODO_CAR <= fHasta)

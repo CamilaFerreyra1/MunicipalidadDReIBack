@@ -54,13 +54,5 @@ namespace DReI.BackWeb.Models.Entities
         [Required]
         public int UsrBaja { get; set; }
 
-        // 🔗 Propiedades de navegación (opcional, descomenta si las necesitas)
-
-        // [ForeignKey("IdRubro")]
-        // public virtual Rubro Rubro { get; set; }
-
-        // Si tienes entidad "Actividad", puedes agregar:
-        // [ForeignKey("CodActividad")]
-        // public virtual Actividad Actividad { get; set; }
     }
 }

@@ -101,7 +101,7 @@ namespace DReI.BackWeb.Models.Entities
         public DateTime FRECEPCIONTRAMITE { get; set; }
         public DateTime FAPROBACIONTRAMITE { get; set; }
 
-        // 🔗 Relación con DeclaracionJuradaCabecera
+
         public virtual ICollection<DDJJCabecera> Declaraciones { get; set; }
     }
 }

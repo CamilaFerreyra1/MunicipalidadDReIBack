@@ -22,12 +22,5 @@ namespace DReI.BackWeb.Models.Entities
         [Required]
         public DateTime FVigenciaHasta { get; set; }
 
-        // 🔗 Propiedades de navegación (opcional, descomenta si las necesitas)
-
-        // [ForeignKey("CodActividad")]
-        // public virtual Actividad Actividad { get; set; }
-
-        // [ForeignKey("NroNomenclador")]
-        // public virtual Nomenclador Nomenclador { get; set; }
     }
 }

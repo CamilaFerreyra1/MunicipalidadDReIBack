@@ -61,9 +61,5 @@ namespace DReI.BackWeb.Models.Entities
         [Required]
         public int TIPO_RETENCION_DRI { get; set; }
 
-        // 🔗 Propiedad de navegación (opcional, descomenta si la necesitas)
-
-        // [ForeignKey("NRO_INCRIPCION")]
-        // public virtual ContribuyenteDetalle Contribuyente { get; set; }
     }
 }

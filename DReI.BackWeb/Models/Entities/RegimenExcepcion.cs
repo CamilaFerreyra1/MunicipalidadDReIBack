@@ -20,7 +20,7 @@ namespace DReI.BackWeb.Models.Entities
             UsrBaja = 0;
         }
 
-        [NotMapped] // ← No se guarda en la base de datos
+        [NotMapped] 
         public bool Vigente
         {
             get => FHasta >= DateTime.Today;
@@ -44,9 +44,6 @@ namespace DReI.BackWeb.Models.Entities
         public DateTime FBaja { get; set; }
         public int UsrBaja { get; set; }
 
-        // 🔗 Propiedad de navegación (opcional, si necesitas relación con Contribuyente)
-        // [ForeignKey("NRO_INCRIPCION")]
-        // public virtual ContribuyenteDetalle Contribuyente { get; set; }
     }
 
     public class RegimenExcepcionMetadata

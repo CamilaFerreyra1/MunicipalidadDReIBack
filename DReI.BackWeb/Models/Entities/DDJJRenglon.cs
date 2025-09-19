@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DReI.BackWeb.Models.Entities
 {
     [Table("DRI_DJ_REN")]
-    [MetadataType(typeof(DDJJRenglonMetadata))]
+    //[MetadataType(typeof(DDJJRenglonMetadata))]
     public class DDJJRenglon
     {
         public DDJJRenglon()
@@ -84,11 +84,8 @@ namespace DReI.BackWeb.Models.Entities
         public virtual DDJJCabecera Declaracion { get; set; }
     }
 
-    public class DDJJRenglonMetadata
-    {
-        // Aquí puedes agregar validaciones adicionales si las necesitas
-        // Por ejemplo:
-        // [Required]
-        // public string Descripcion { get; set; }
-    }
+    //public class DDJJRenglonMetadata
+    //{
+ 
+    //}
 }

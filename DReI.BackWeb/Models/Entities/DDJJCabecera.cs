@@ -177,13 +177,9 @@ namespace DReI.BackWeb.Models.Entities
         public decimal ImpBoletaAnt { get; set; }
         public decimal ImpRecargoAnt { get; set; }
         public decimal TotalCreditoTomado { get; set; }
-
-        // 🔗 Relaciones (comentadas hasta que crees las entidades)
-        // public virtual Contribuyente Contribuyente { get; set; }
-        // public virtual ICollection<DeclaracionJuradaRenglon> Renglones { get; set; }
     }
 
-    public class DDJJCabeceraMetadata // ← ¡CAMBIADO A PUBLIC!
+    public class DDJJCabeceraMetadata 
     {
         [Required]
         public int PeriodoMes { get; set; }

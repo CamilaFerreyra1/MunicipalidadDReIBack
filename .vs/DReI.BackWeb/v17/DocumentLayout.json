@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\DReI.BackWeb\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{555A246A-13A1-42D3-9BE1-6623514F7274}|DReI.BackWeb\\DReI.BackWeb.csproj|c:\\drei.backweb\\drei.backweb\\services\\monotributoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{555A246A-13A1-42D3-9BE1-6623514F7274}|DReI.BackWeb\\DReI.BackWeb.csproj|solutionrelative:drei.backweb\\services\\monotributoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonotributoService.cs",
+              "DocumentMoniker": "C:\\DReI.BackWeb\\DReI.BackWeb\\Services\\MonotributoService.cs",
+              "RelativeDocumentMoniker": "DReI.BackWeb\\Services\\MonotributoService.cs",
+              "ToolTip": "C:\\DReI.BackWeb\\DReI.BackWeb\\Services\\MonotributoService.cs",
+              "RelativeToolTip": "DReI.BackWeb\\Services\\MonotributoService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:11:29.568Z",
+              "EditorCaption": ""
             }
           ]
         }

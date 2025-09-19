@@ -164,15 +164,23 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CaratulaController.cs" />
     <Compile Include="Controllers\ConfigTributariaController.cs" />
+    <Compile Include="Controllers\ConfiguracionTributariaController.cs" />
     <Compile Include="Controllers\ContribuyentesController.cs" />
+    <Compile Include="Controllers\DeclaracionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VigenciasController.cs" />
     <Compile Include="Data\DbContext.cs" />
     <Compile Include="Data\DbContextFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DatoContribuyente.cs" />
+    <Compile Include="Models\Dto\ConfiguracionTributariaDto.cs" />
+    <Compile Include="Models\Dto\DeclaracionesDto.cs" />
+    <Compile Include="Models\Dto\ContribuyenteDto.cs" />
+    <Compile Include="Models\Dto\MonotributoDto.cs" />
+    <Compile Include="Models\Dto\VigenciaDto.cs" />
+    <Compile Include="Models\Entities\DatoContribuyente.cs" />
     <Compile Include="Models\Entities\ActividadContribuyente.cs" />
     <Compile Include="Models\Entities\ActividadExcluyente.cs" />
     <Compile Include="Models\Entities\CaratulaMagic.cs" />
@@ -195,8 +203,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CaratulaService.cs" />
     <Compile Include="Services\ConfigTributariaService.cs" />
+    <Compile Include="Services\ConfiguracionTributariaService.cs" />
     <Compile Include="Services\ContribuyentesService.cs" />
-    <Compile Include="Services\RutinasService.cs" />
+    <Compile Include="Services\DeclaracionesService.cs" />
+    <Compile Include="Services\MonotributoService.cs" />
+    <Compile Include="Services\Utils\RutinasService.cs" />
+    <Compile Include="Services\VigenciasService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -251,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ConfiguracionTributaria\" />
+    <Folder Include="Views\Declaraciones\" />
+    <Folder Include="Views\Vigencias\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

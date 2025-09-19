@@ -33,7 +33,6 @@ namespace DReI.BackWeb.Models.Entities
         public string MotivoBaja { get; set; }
         public string Comentario { get; set; }
 
-        // Relación con detalle
         public virtual ContribuyenteDetalleMagic MAGIC_M03DRI { get; set; }
 
         public void ValoresPorDefecto()

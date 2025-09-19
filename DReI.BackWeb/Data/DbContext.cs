@@ -10,9 +10,9 @@ namespace DReI.BackWeb.Data
     /// Hereda de DbContext de Entity Framework y define los DbSet para las entidades principales.
     /// También incluye una implementación mejorada de SaveChanges() para mostrar mensajes de error claros.
     /// </summary>
-    public class DbContext : System.Data.Entity.DbContext
+    public class ApplicationDbContext : System.Data.Entity.DbContext
     {
-        public DbContext()
+        public ApplicationDbContext()
             : base("name=rafaelagovarEntities")
         {
             Configuration.LazyLoadingEnabled = false;

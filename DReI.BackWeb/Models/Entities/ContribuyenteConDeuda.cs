@@ -14,7 +14,7 @@ namespace DReI.BackWeb.Models.Entities
         public int NRO_INCRIPCION { get; set; }
 
         [Required]
-        public DateTime PeridoHasta { get; set; } // tal vez sea "PeriodoHasta"? (revisa ortografía en DB)
+        public DateTime PeridoHasta { get; set; } // no esta mal escrito
 
         [Required]
         public DateTime FUltVerificacionConDeuda { get; set; }
@@ -22,9 +22,5 @@ namespace DReI.BackWeb.Models.Entities
         [Required]
         public DateTime FBaja { get; set; }
 
-        // 🔗 Propiedad de navegación (opcional, descomenta si la necesitas)
-
-        // [ForeignKey("NRO_INCRIPCION")]
-        // public virtual ContribuyenteDetalle Contribuyente { get; set; }
     }
 }

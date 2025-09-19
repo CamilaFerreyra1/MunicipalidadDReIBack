@@ -12,6 +12,7 @@ namespace DReI.BackWeb.Controllers
     public class ContribuyentesController : ApiController 
     {
         [HttpGet]
+        [AllowAnonymous]
         [Route("{cuenta:int}")]
         public IHttpActionResult Obtener(int cuenta, bool traerDadosDeBaja = false)
         {

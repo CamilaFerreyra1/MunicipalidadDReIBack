@@ -51,13 +51,5 @@ namespace DReI.BackWeb.Models.Entities
 
         public string Observaciones { get; set; }
 
-        // 🔗 Propiedades de navegación (opcional, descomenta si las necesitas)
-
-        // [ForeignKey("NRO_INCRIPCION")]
-        // public virtual ContribuyenteDetalle Contribuyente { get; set; }
-
-        // Si tienes una entidad "Actividad", puedes agregar:
-        // [ForeignKey("CodActividad")]
-        // public virtual Actividad Actividad { get; set; }
     }
 }

@@ -56,11 +56,6 @@ namespace DReI.BackWeb.Models.Entities
 
         [Required]
         public int UsrBaja { get; set; }
-        // 🔗 Propiedades de navegación (opcional, descomenta si las necesitas)
-        // [ForeignKey("NRO_INCRIPCION")]
-        // public virtual ContribuyenteDetalle Contribuyente { get; set; }
 
-        // [ForeignKey("IdRubro")]
-        // public virtual Rubro Rubro { get; set; }
     }
 }

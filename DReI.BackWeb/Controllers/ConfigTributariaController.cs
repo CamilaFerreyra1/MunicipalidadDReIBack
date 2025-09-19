@@ -24,11 +24,7 @@ namespace DReI.BackWeb.Controllers
 
         private int ObtenerUsuarioDesdeToken()
         {
-            // Ejemplo: si usas JWT, podrías hacer:
-            // var identity = User.Identity as ClaimsIdentity;
-            // var userIdClaim = identity?.FindFirst("UserId");
-            // return int.Parse(userIdClaim?.Value ?? "0");
-
+            // VER LO DEL TOKEN 
             // Por ahora, para pruebas:
             return 1;
         }

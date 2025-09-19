@@ -9,12 +9,11 @@ namespace DReI.BackWeb.Data
 {
     public static class DbContextFactory 
     {
-        public static DbContext CreateRafaelaContext()
+        public static ApplicationDbContext CreateRafaelaContext()
         {
-            return new DbContext();
+            return new ApplicationDbContext();
         }
 
-        // Solo descomenta esto cuando crees AdministracionEntities
         // public static AdministracionEntities CreateAdministracionContext()
         // {
         //     return new AdministracionEntities();
