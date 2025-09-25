@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -94,6 +95,8 @@ namespace DReI.BackWeb.Models.Dto
         //public DateTime FAPROBACIONTRAMITE { get; set; }
         public int NRO_INCRIPCION { get; set; }
         public string RAZONSOCIAL { get; set; }
+        public short TIPO_DOC { get; set; }
+        public int NRO_DOC { get; set; }
         public string NOM_FANTASIA { get; set; }
         public string NRO_CUIT_DRI { get; set; }
         public string CALLE_PARTIC { get; set; }
@@ -101,6 +104,7 @@ namespace DReI.BackWeb.Models.Dto
         public string BARRIO_PARTIC { get; set; }
         public string EMAIL { get; set; }
         public DateTime FECHABAJA { get; set; }
+        [JsonProperty("EstaActivo")] 
         public bool EstaActivo => FECHABAJA.Year == 1900;
 
     }

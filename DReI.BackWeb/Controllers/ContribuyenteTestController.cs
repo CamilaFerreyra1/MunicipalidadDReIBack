@@ -1,33 +1,35 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Net;
+using System.Web.Http;
 using DReI.BackWeb.Services;
 using DReI.BackWeb.Models.Responses;
 
 namespace DReI.BackWeb.Controllers
 {
-    [RoutePrefix("api/contribuyentes")]
-    public class ContribuyentesController : ApiController
+    [RoutePrefix("api/test")]
+    public class ContribuyenteTestController : ApiController 
     {
-        private readonly ContribuyentesService _service;
+        private readonly ContribuyentesService _service; 
 
-        public ContribuyentesController(ContribuyentesService service)
+        public ContribuyenteTestController(ContribuyentesService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        [Route("{cuenta:int}")]
-        public IHttpActionResult Obtener(int cuenta, bool traerDadosDeBaja = false)
+        [Route("contribuyente/{cuenta:int}")]
+        public IHttpActionResult BuscarContribuyente(int cuenta)
         {
             var respuesta = new Respuesta();
 
             try
             {
-                var contribuyente = _service.Obtener(cuenta, traerDadosDeBaja);
+                var contribuyente = _service.Obtener(cuenta);
 
                 if (contribuyente == null)
                 {
                     respuesta.AgregarMensajeDeError($"No se encontró el contribuyente con cuenta {cuenta}.");
-                    return Content(System.Net.HttpStatusCode.NotFound, respuesta);
+                    return Content(HttpStatusCode.NotFound, respuesta);
                 }
 
                 respuesta.Resultado = contribuyente;
@@ -36,12 +38,12 @@ namespace DReI.BackWeb.Controllers
             catch (System.Data.SqlClient.SqlException ex)
             {
                 respuesta.AgregarMensajeDeError($"Error de base de datos: {ex.Message}");
-                return Content(System.Net.HttpStatusCode.InternalServerError, respuesta);
+                return Content(HttpStatusCode.InternalServerError, respuesta);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 respuesta.AgregarMensajeDeError($"Error inesperado: {ex.Message}");
-                return Content(System.Net.HttpStatusCode.InternalServerError, respuesta);
+                return Content(HttpStatusCode.InternalServerError, respuesta);
             }
         }
     }

@@ -54,5 +54,42 @@ namespace DReI.BackWeb.Services.Utils
             d += 0.05m;
             return Math.Round(d, 1);
         }
+        public DateTime ObtenerFVto(ContribuyenteDetalleMagic cuenta, CaratulaMagic caratula)
+        {
+            if (cuenta == null || caratula == null)
+                return DateTime.MinValue;
+
+            string nro = "";
+            if (caratula.PERIODO_CAR.Year >= 2015)
+                nro = cuenta.NRO_CUIT_DRI?.Trim() ?? "";
+            else
+                nro = cuenta.NRO_INCRIP_API.ToString().Trim();
+
+            DateTime fvto;
+
+            if (cuenta.CONV_MULTILATERAL == "S" && !string.IsNullOrEmpty(nro))
+            {
+                char ultimoDigito = nro[nro.Length - 1];
+                switch (ultimoDigito)
+                {
+                    case '0': fvto = caratula.FVTO_API0_CAR; break;
+                    case '1': fvto = caratula.FVTO_API1_CAR; break;
+                    case '2': fvto = caratula.FVTO_API2_CAR; break;
+                    case '3': fvto = caratula.FVTO_API3_CAR; break;
+                    case '4': fvto = caratula.FVTO_API4_CAR; break;
+                    case '5': fvto = caratula.FVTO_API5_CAR; break;
+                    case '6': fvto = caratula.FVTO_API6_CAR; break;
+                    case '7': fvto = caratula.FVTO_API7_CAR; break;
+                    case '8': fvto = caratula.FVTO_API8_CAR; break;
+                    default: fvto = caratula.FVTO_API9_CAR; break;
+                }
+            }
+            else
+            {
+                fvto = caratula.F_VTO_CAR;
+            }
+
+            return fvto;
+        }
     }
 }

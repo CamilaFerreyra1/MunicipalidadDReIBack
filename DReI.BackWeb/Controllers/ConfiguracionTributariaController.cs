@@ -8,35 +8,33 @@ using System.Linq;
 
 namespace DReI.BackWeb.Controllers
 {
-    [RoutePrefix("api/configuracion")]
+    [RoutePrefix("api/configuracion-tributaria")]
     public class ConfiguracionTributariaController : ApiController
     {
-        [HttpGet]
-        [Route("lista")]
-        [AllowAnonymous]
-        public IHttpActionResult ObtenerLista()
+        private readonly ConfiguracionTributariaService _service;
+
+        public ConfiguracionTributariaController(ConfiguracionTributariaService service)
         {
-            using (var context = DbContextFactory.CreateRafaelaContext())
-            {
-                var service = new ConfiguracionTributariaService(context);
-                var configuraciones = service.ObtenerLista().ToList();
-                return Ok(configuraciones);
-            }
+            _service = service;
+        }
+
+        [HttpGet]
+        [Route("")]
+        public IHttpActionResult Get()
+        {
+            var lista = _service.ObtenerLista();
+            return Ok(lista);
         }
 
         [HttpGet]
         [Route("{id}")]
-        [AllowAnonymous]
-        public IHttpActionResult ObtenerPorId(int id)
+        public IHttpActionResult GetPorId(int id)
         {
-            using (var context = DbContextFactory.CreateRafaelaContext())
-            {
-                var service = new ConfiguracionTributariaService(context);
-                var configuracion = service.ObtenerPorId(id);
-                if (configuracion == null)
-                    return NotFound();
-                return Ok(configuracion);
-            }
+            var config = _service.ObtenerPorId(id);
+            if (config == null)
+                return NotFound();
+
+            return Ok(config);
         }
     }
 }

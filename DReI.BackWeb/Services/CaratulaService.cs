@@ -8,6 +8,13 @@ namespace DReI.BackWeb.Services
 {
     public class CaratulaService
     {
+        private readonly ApplicationDbContext _context;
+
+        public CaratulaService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // Obtiene carátulas del año en curso
         public List<CaratulaMagic> ObtenerCaratulas()
         {
@@ -33,13 +40,10 @@ namespace DReI.BackWeb.Services
         // Obtiene carátulas entre dos fechas
         public List<CaratulaMagic> ObtenerCaratulas(DateTime fDesde, DateTime fHasta)
         {
-            using (var context = new ApplicationDbContext())
-            {
-                return context.MAGIC_C03CARAA
-                    .Where(c => c.F_BAJA_CAR.Year == 1900 && c.PERIODO_CAR >= fDesde && c.PERIODO_CAR <= fHasta)
-                    .OrderBy(c => c.PERIODO_CAR)
-                    .ToList();
-            }
+            return _context.MAGIC_C03CARAA
+                .Where(c => c.F_BAJA_CAR.Year == 1900 && c.PERIODO_CAR >= fDesde && c.PERIODO_CAR <= fHasta)
+                .OrderBy(c => c.PERIODO_CAR)
+                .ToList();
         }
     }
 }

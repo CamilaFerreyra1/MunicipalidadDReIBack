@@ -15,10 +15,12 @@ namespace DReI.BackWeb.Models.Dto
         public DateTime FVigenciaHasta { get; set; }
         public decimal ValorUCM { get; set; }
         public int CantidadCuotas { get; set; }
+        public DateTime FVto1erPeriodo { get; set; }
     }
 
     public class VigenciasRegimenDto
     {
+        public int Anio => FDesde.Year;
         public DateTime FDesde { get; set; }
         public DateTime FHasta { get; set; }
         public List<VigenciaDto> Categorias { get; set; } = new List<VigenciaDto>();
